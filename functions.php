@@ -18,7 +18,7 @@ function template_header($title) {
 
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $user_welcom = 'Please log in';
-        $loginurl = "register.html?page=login";
+        $loginurl = "register.html?page=register";
         $loginWord = "Login";
         
     }

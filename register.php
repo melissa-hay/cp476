@@ -1,7 +1,7 @@
 <?php
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("Location: http://localhost:8080/ShoppingCartcopy/index.php");
-    exit;
+	header('Location: index.php?page=home');
+	exit;
 }
 require_once "config.php";
  
@@ -50,7 +50,7 @@ if ($stmt = $link->prepare('SELECT id, password FROM accounts WHERE username = ?
             $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
             $stmt->execute();
 			echo 'You have successfully registered, you can now login!';
-			header("Location: http://localhost:8080/ShoppingCartcopy/login.php");
+			header('Location: index.php?page=login');
         } else {
             // Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
             echo 'Could not prepare statement!';
