@@ -11,8 +11,8 @@ html {
 body {
 	position: relative;
 	min-height: 100%;
-	color: #555555;
-	background-color: #FFFFFF;
+	color: #230c3d;
+	background-color: #f3eff7;
 	margin: 0;
 	padding-bottom: 100px; /* Same height as footer */
 }
@@ -70,11 +70,11 @@ header .link-icons {
 }
 header .link-icons a {
 	text-decoration: none;
-	color: #394352;
+	color: #96d6d3;
 	padding: 0 10px;
 }
 header .link-icons a:hover {
-	color: #4e5c70;
+	color: #7748cf;
 }
 header .link-icons a i {
 	font-size: 18px;
@@ -97,7 +97,7 @@ header .link-icons a span {
 main .featured {
 	display: flex;
 	flex-direction: column;
-	background-image: url(imgs/featured-image.jpg);
+	background-image: url(imgs/candy.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 500px;
@@ -354,16 +354,17 @@ footer {
 
 .register{
 	width: 400px;
-	background-color: #ffffff;
+	background-color: #eee7f3;
+	border-radius: 20px;
 	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
 	margin: 100px auto;
 }
 
 .register h1{
 	text-align: center;
-  	color: #5b6574;
-  	font-size: 24px;
-  	padding: 20px 0 20px 0;
+  	color: #7748cf;
+  	font-size: 40px;
+  	padding: 20px 0 10px 0;
   	border-bottom: 1px solid #dee0e4;
 }
 
@@ -377,16 +378,18 @@ footer {
 .register form label {
 	display: flex;
   	justify-content: center;
+	border-radius: 5px 0px 0px 5px;
   	align-items: center;
   	width: 50px;
  	height: 50px;
-  	background-color: #3274d6;
+  	background-color: #b29fc4;
   	color: #ffffff;
 }
 .register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {	
 	width: 310px;
   	height: 50px;
   	border: 1px solid #dee0e4;
+	border-radius: 0px 5px 5px 0px;
   	margin-bottom: 20px;
   	padding: 0 15px;
 }
@@ -395,8 +398,9 @@ footer {
 	width: 150px;
 	padding: 15px;
 	margin-top: 20px;
-	background-color: #3274d6;
-   border: 0;
+	background-color: #d281da;
+	border-radius: 10px;
+   	border: 0;
 	cursor: pointer;
 	font-weight: bold;
 	color: #ffffff;
@@ -404,27 +408,35 @@ footer {
 }
 
 .register form input[type="submit"]:hover {
-	background-color: #2868c7;
+	background-color: #d281da;
   	transition: background-color 0.2s;
 }
 
+.register a {
+	color: rgb(60, 185, 243);
+	background-color: transparent;
+	text-decoration: none;
+  }
+
 .login{
 	width: 400px;
-	background-color: #ffffff;
+	background-color: #eee7f3;
+	border-radius: 20px;
 	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
 	margin: 100px auto;
 }
 
 .login h1{
 	text-align: center;
-  	color: #5b6574;
-  	font-size: 24px;
-  	padding: 20px 0 20px 0;
-  	border-bottom: 1px solid #dee0e4;
+  	color: #7748cf;
+  	font-size: 40px;
+  	padding: 20px 0 10px 0;
+  	border-bottom: 1px solid #b7a0d1;
 }
 
 
 .login h3{
+	color: rgb(42, 37, 53);
 	text-align: center;
   	
 }
@@ -440,25 +452,28 @@ footer {
 	display: flex;
   	justify-content: center;
   	align-items: center;
+	border-radius: 5px 0px 0px 5px;
   	width: 50px;
  	height: 50px;
-  	background-color: #3274d6;
+  	background-color: #b29fc4;
   	color: #ffffff;
 }
 .login form input[type="password"], .login form input[type="text"] {	
 	width: 310px;
   	height: 50px;
+	border-radius: 0px 5px 5px 0px;
   	border: 1px solid #dee0e4;
   	margin-bottom: 20px;
-  	padding: 0 15px;
+  	padding: 0 10px;
 }
 
 .login form input[type="submit"] {
 	width: 150px;
 	padding: 15px;
 	margin-top: 20px;
-	background-color: #3274d6;
-   border: 0;
+	background-color: #d281da;
+	border-radius: 10px;
+    border: 0;
 	cursor: pointer;
 	font-weight: bold;
 	color: #ffffff;
@@ -466,6 +481,15 @@ footer {
 }
 
 .login form input[type="submit"]:hover {
-	background-color: #2868c7;
+	background-color: #d281da;
   	transition: background-color 0.2s;
+}
+.login p {
+	color: rgb(29, 26, 37);
+	text-indent: 30px;
+}
+.login a {
+	color: rgb(60, 185, 243);
+	background-color: transparent;
+	text-decoration: none;
 }
