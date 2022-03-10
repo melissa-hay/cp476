@@ -1,0 +1,121 @@
+CREATE TABLE IF NOT EXISTS 'products' (
+    'id' int(11) NOT NULL AUTO_INCREMENT,
+    'name' varchar(200) NOT NULL,
+    'desc' text NOT NULL,
+    'price' decimal(7, 2) NOT NULL,
+    'rrp' decimal(7, 2) NOT NULL DEFAULT '0.00',
+    'quantity' int(11) NOT NULL,
+    'img' text NOT NULL,
+    'date_added' datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY ('id')
+) ENGINE = InnoDB AUTO_INCREMENT = 6 DEFAULT CHARSET = utf8;
+INSERT INTO 'products' (
+        'id',
+        'name',
+        'desc',
+        'price',
+        'rrp',
+        'quantity',
+        'img',
+        'date_added',
+        'country'
+    )
+VALUES (
+        1,
+        'Bêtises de Cambrai',
+        '<p>The Bêtise is a traditional sweet from the Cambrai in Northern France.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 225g.</li>\r\n<li>Delicately minty flavour and soft caramel centre.</li>\r\n<li>Composition: Sugar, glucose syrup, natural mint flavour. Without dye.</li>\r\n<li>Origin: North of France.</li>\r\n</ul>',
+        '13.95',
+        '0.00',
+        10,
+        'betisses.jpg',
+        '2022-02-14 17:42:04',
+        'France'
+    ),
+    (
+        2,
+        'Chocolate truffles',
+        '<p>Classic balls of ganache rolled in cocoa powder and nuts.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 225g (25 truffles).</li>\r\n<li>Handmade in France.</li>\r\n<li>Composition: chocolate, fresh cream, cocoa, nuts.</li>\r\n<li>Origin: France.</li>\r\n</ul>',
+        '40.00',
+        '0.00',
+        10,
+        'truffes.jpg',
+        '2022-02-15 17:42:04',
+        'France'
+    );
+(
+    3,
+    'Koalas March Tezukuri Kit - Animal Tour Of The World',
+    '<p>A DIY animal safari diorama snack box with various Lotte treats.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 47g.</li>\r\n<li>Made in Japan by Lotte.</li>\r\n<li>Includes: 1 x Koala’s March pack, 5 x Ghana chocolate pieces, 1 x bag of Crunky wafers, 1 x cutout craft card, and 1 x instruction leaflet</li>\r\n<li>Origin: Japan.</li>\r\n</ul>',
+    '9.99',
+    '0.00',
+    10,
+    'koalas.jpg',
+    '2022-02-15 17:42:04',
+    'Japan'
+);
+(
+    4,
+    'UHA Tokuno 8.2 Milk High Concentrated Candy - Matcha Green tea',
+    '<p>If you love sweet milky creamy flavors and matcha you will love UHA High Concentrated Matcha Milk Candy! Made with real milk and matcha, these yummy little round candies are so sweet and creamy!</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 37g.</li>\r\n<li>Made in Japan by UHA Mikakuto.</li>\r\n<li>Each tube includes 10 pieces of hard candy</li>\r\n<li>Origin: Japan.</li>\r\n</ul>',
+    '3.90',
+    '0.00',
+    10,
+    'matchamilk.jpg',
+    '2022-02-15 17:42:04',
+    'Japan'
+);
+(
+    5,
+    'De La Rosa Pulparindots - Tamarind Flavour',
+    '<p>PulparinDots is an exquisite ball-shaped candy with a tamarind fruit pulp filling and a hard candy exterior.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>20 pieces per box</li>\r\n<li> Sugar pulparindo pulp filling corn syrup invertded sugar dehydrated fruit citric acid sorbitol salt artificial flavors.</li>\r\n</ul>',
+    '9.49',
+    '0.00',
+    10,
+    'pulparindots.jpg',
+    '2022-02-15 17:42:04',
+    'Mexico'
+);
+(
+    6,
+    'Banderitas Jumbo/ Coconut Candy',
+    '<p> The Coconut Candy was born in the coast areas of Mexico, the combination of Spanish and indigenous products gave rise to this delicious classic, a mixture of egg, milk and fresh grated coconut.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>10 pieces per bag</li>\r\n<li>En las zonas costeras de México nace el Dulce de Coco, la combinación de los productos españoles con los indígenas dio origen a este delicioso clásico, una mezcla de huevo, leche y coco rallado fresco.</li>\r\n</ul>',
+    '13.45',
+    '0.00',
+    10,
+    'banderitas.jpg',
+    '2022-02-15 17:42:04',
+    'Mexico'
+);
+(
+    7,
+    'Parle Mango Bites Candy',
+    '<p>Experience the natural and tanginess of a raw mango with the Parle Kaccha Mango Bite Candy, which we provide. It is the only candy where you get the taste of your favourite mangoes.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 300g.</li>\r\n<li>Made in India by Parle.</li>\r\n<li>Allergen-Free</li>\r\n<li>Origin: India.</li>\r\n</ul>',
+    '4.60',
+    '0.00',
+    10,
+    'mangobites.jpg',
+    '2022-02-15 17:42:04',
+    'India'
+);
+(
+    8,
+    'Loukoums',
+    '<p>This loukoums box is made of different flavours. This loukoums are sweet and their texture is perfect thanks to the chios mastic.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 400g.</li>\r\n<li>Made in Greece by Sardis.</li>\r\n<li>Vegetarian</li>\r\n<li>Origin: Greece.</li>\r\n</ul>',
+    '11.60',
+    '0.00',
+    10,
+    'loukoums.jpg',
+    '2022-02-15 17:42:04',
+    'Greece'
+);
+(
+    9,
+    'Haribo Caterpillar XXL Tub',
+    '<p>Two colored caterpillars made from soft marshmallows gum and in the fruity flavours of strawberry, raspberry, and juicy orange.</p>\r\n<h3>Description</h3>\r\n<ul>\r\n<li>Net weight: 960g.</li>\r\n<li>Made in Germany by Haribo.</li>\r\n<li>Protect from heat and humidity</li>\r\n<li>Origin: Germany.</li>\r\n</ul>',
+    '18.80',
+    '0.00',
+    10,
+    'raupexl.jpg',
+    '2022-02-15 17:42:04',
+    'Germany'
+);
