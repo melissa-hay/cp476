@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'Melisa98';
+    $DATABASE_PASS = 'root';
     $DATABASE_NAME = 'shoppingcart';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -17,8 +17,7 @@ function template_header($title) {
     $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        $user_welcom = 'Please log in';
-        $loginurl = "register.html?page=register";
+        $loginurl = "index.php?page=login";
         $loginWord = "Login";
         
     }
@@ -36,30 +35,25 @@ function template_header($title) {
             <title>$title</title>
             <link href="style.css" rel="stylesheet" type="text/css">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+            <link rel="shortcut icon" href="imgs/logo-small.png">
         </head>
         <body>
             <header>
                 <div class="content-wrapper">
-                    <h1>Shopping Cart System</h1>
+                    <img style="width: 8%;height: 8%" src="imgs/logo.png">
                     <nav>
                         <a href="index.php">Home</a>
-                        <a href="index.php?page=products">Products</a>
-                        
+                        <a href="index.php?page=products">Favourites</a>
+                        <a href="">SALES</a>
                         <a href=$loginurl>$loginWord</a>
-                        
-                            
                     </nav>
-                    <div class="welcome-msg">
-                        <span>$user_welcom</span>
-        
-                    </div>
+                    <input type="text" class="inputField-search" placeholder="Search">
                     <div class="link-icons">
                         <a href="index.php?page=cart">
                             <i class="fas fa-shopping-cart"></i>
                             <span>$num_items_in_cart</span>
                         </a>
                     </div>
-                    
                 </div>
             </header>
             <main>

@@ -20,11 +20,12 @@ h1, h2, h3, h4, h5 {
 	color: #394352;
 }
 .content-wrapper {
-	width: 1050px;
-	margin: 0 auto;
+	width: 100%;
+	padding: 0 4% 0 4%;
 }
 header {
-	border-bottom: 1px solid #EEEEEE;
+	margin: 0;
+	background-color: #000747;
 }
 header .content-wrapper {
 	display: flex;
@@ -46,20 +47,15 @@ header nav {
 }
 header nav a {
 	text-decoration: none;
-	color: #555555;
+	color: #EEEEEE;
 	padding: 10px 10px;
 	margin: 0 10px;
+	font-weight: bold;
 }
 header nav a:hover {
 	border-bottom: 1px solid #aaa;
 }
 
-header .welcome-msg span {
-	display: flex;
-	font-size: 20px;
-	padding-top: 24px ;
-	padding-left: 100px;
-}
 header .link-icons {
 	display: flex;
 	flex-grow: 1;
@@ -97,14 +93,38 @@ header .link-icons a span {
 main .featured {
 	display: flex;
 	flex-direction: column;
-	background-image: url(imgs/candy.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 500px;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	animation: imagesfade 30s infinite;
+	animation-timing-function: ease-in-out;
+	background-position:center;
+	background-color:#d281da;
+	position:relative;
+	opacity: 75%;
+} 
+
+@keyframes imagesfade {
+	0% { 
+		background-image: url(/cp476/imgs/candy.jpg);
+	}
+	25% {
+		background-image: url(/cp476/imgs/gummy-bears.jpeg);
+	}
+	50% {
+		background-image: url(/cp476/imgs/candy-corn.jpeg);
+	}
+	75% {
+		background-image: url(/cp476/imgs/candy-hearts.jpeg);
+	}
+	100% {
+		background-image: url(/cp476/imgs/candy2.jpeg);
+	} 
 }
+
 main .featured h2 {
 	display: inline-block;
 	margin: 0;
@@ -123,20 +143,23 @@ main .featured p {
 }
 main .recentlyadded h2 {
 	display: block;
-	font-weight: normal;
+	font-weight: bold;
 	margin: 0;
 	padding: 40px 0;
 	font-size: 24px;
 	text-align: center;
 	width: 100%;
-	border-bottom: 1px solid #EEEEEE;
+	color: #000747;
 }
 main .recentlyadded .products, main .products .products-wrapper {
+	height: fit-content;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 40px 0 0 0;
+	padding: 20px;
+	border: 1px solid #000747;
+	border-radius: 5px;
 }
 main .recentlyadded .products .product, main .products .products-wrapper .product {
 	display: block;
@@ -492,4 +515,22 @@ footer {
 	color: rgb(60, 185, 243);
 	background-color: transparent;
 	text-decoration: none;
+}
+
+.login-body {
+	background-image: linear-gradient(#577eff,#d281da);
+}
+
+.register-body {
+	background-image: linear-gradient(#577eff,#d281da);
+}
+
+.inputField-search {
+	width: 25%;
+	height: 50%;
+	align-self: center;
+	background-color: #c4c4c4;
+	border: 1px solid #c4c4c4;
+	border-radius: 20px;
+	padding: 3px 10px 3px 10px;
 }

@@ -78,13 +78,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
         <link href="style.css" rel="stylesheet" type="text/css">
-
+        <link rel="shortcut icon" href="imgs/logo-small.png">
     </head>
-    <body>
+    <body class="login-body">
 	    <div class="login">
 			<h1>Login</h1>
             <h3>Please fill in your credentials to login.</h3>
@@ -109,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
 
                 <input type="submit" value="Login">
-                <p>Don't have an account? <a href="register.html">Sign up now</a>.</p>
+                <p>Don't have an account? <a href="register.html" style="font-weight:bold">Sign up now</a>.</p>
 
 			</div> 
 	</form>
