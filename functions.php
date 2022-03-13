@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
+    $DATABASE_PASS = 'Melisa98';
     $DATABASE_NAME = 'shoppingcart';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -18,6 +18,7 @@ function template_header($title) {
 
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $loginurl = "index.php?page=login";
+        $user_welcom = 'Please log in';
         $loginWord = "Login";
         
     }
@@ -46,7 +47,11 @@ function template_header($title) {
                         <a href="index.php?page=products">Favourites</a>
                         <a href="">SALES</a>
                         <a href=$loginurl>$loginWord</a>
+                        
                     </nav>
+                    <div class="welcome">
+                        <p> $user_welcom</p>
+                    </div>
                     <input type="text" class="inputField-search" placeholder="Search">
                     <div class="link-icons">
                         <a href="index.php?page=cart">

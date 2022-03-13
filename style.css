@@ -533,4 +533,539 @@ footer {
 	border: 1px solid #c4c4c4;
 	border-radius: 20px;
 	padding: 3px 10px 3px 10px;
+}* {
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	height: 100%;
+}
+body {
+	position: relative;
+	min-height: 100%;
+	color: #230c3d;
+	background-color: #f3eff7;
+	margin: 0;
+	padding-bottom: 100px; /* Same height as footer */
+}
+h1, h2, h3, h4, h5 {
+	color: #394352;
+}
+.content-wrapper {
+	width: 100%;
+	padding: 0 4% 0 4%;
+}
+header {
+	margin: 0;
+	background-color: #000747;
+}
+header .content-wrapper {
+	display: flex;
+}
+header h1 {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	font-size: 20px;
+	margin: 0;
+	padding: 24px 0;
+}
+header nav {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	justify-content: center;
+	align-items: center;
+}
+header nav a {
+	text-decoration: none;
+	color: #EEEEEE;
+	padding: 10px 10px;
+	margin: 0 10px;
+	font-weight: bold;
+}
+header nav a:hover {
+	border-bottom: 1px solid #aaa;
+}
+
+header .link-icons {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+header .link-icons a {
+	text-decoration: none;
+	color: #96d6d3;
+	padding: 0 10px;
+}
+header .link-icons a:hover {
+	color: #7748cf;
+}
+header .link-icons a i {
+	font-size: 18px;
+}
+header .link-icons a span {
+	display: inline-block;
+	text-align: center;
+	background-color: #63748e;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: 22px;
+	right: 0;
+}
+main .featured {
+	display: flex;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	animation: imagesfade 30s infinite;
+	animation-timing-function: ease-in-out;
+	background-position:center;
+	background-color:#d281da;
+	position:relative;
+	opacity: 75%;
+} 
+
+@keyframes imagesfade {
+	0% { 
+		background-image: url(/cp476/imgs/candy.jpg);
+	}
+	25% {
+		background-image: url(/cp476/imgs/gummy-bears.jpeg);
+	}
+	50% {
+		background-image: url(/cp476/imgs/candy-corn.jpeg);
+	}
+	75% {
+		background-image: url(/cp476/imgs/candy-hearts.jpeg);
+	}
+	100% {
+		background-image: url(/cp476/imgs/candy2.jpeg);
+	} 
+}
+
+main .featured h2 {
+	display: inline-block;
+	margin: 0;
+	width: 1050px;
+	font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+	font-size: 68px;
+	color: #FFFFFF;
+	padding-bottom: 10px;
+}
+main .featured p {
+	display: inline-block;
+	margin: 0;
+	width: 1050px;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+main .recentlyadded h2 {
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+	color: #000747;
+}
+main .recentlyadded .products, main .products .products-wrapper {
+	height: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	border: 1px solid #000747;
+	border-radius: 5px;
+}
+main .recentlyadded .products .product, main .products .products-wrapper .product {
+	display: block;
+	overflow: hidden;
+	text-decoration: none;
+	width: 25%;
+	padding-bottom: 60px;
+}
+main .recentlyadded .products .product img, main .products .products-wrapper .product img {
+	transform: scale(1);
+	transition: transform 1s;
+}
+main .recentlyadded .products .product .name, main .products .products-wrapper .product .name {
+	display: block;
+	color: #555555;
+	padding: 20px 0 2px 0;
+}
+main .recentlyadded .products .product .price, main .products .products-wrapper .product .price {
+	display: block;
+	color: #999999;
+}
+main .recentlyadded .products .product .rrp, main .products .products-wrapper .product .rrp {
+	color: #BBBBBB;
+	text-decoration: line-through;
+}
+main .recentlyadded .products .product:hover img, main .products .products-wrapper .product:hover img {
+	transform: scale(1.05);
+	transition: transform 1s;
+}
+main .recentlyadded .products .product:hover .name, main .products .products-wrapper .product:hover .name {
+	text-decoration: underline;
+}
+main > .product {
+	display: flex;
+	padding: 40px 0;
+}
+main > .product > div {
+	padding-left: 15px;
+}
+main > .product h1 {
+	font-size: 34px;
+	font-weight: normal;
+	margin: 0;
+	padding: 20px 0 10px 0;
+}
+main > .product .price {
+	display: block;
+	font-size: 22px;
+	color: #999999;
+}
+main > .product .rrp {
+	color: #BBBBBB;
+	text-decoration: line-through;
+	font-size: 22px;
+	padding-left: 5px;
+}
+main > .product form {
+	display: flex;
+	flex-flow: column;
+	margin: 40px 0;
+}
+main > .product form input[type="number"] {
+	width: 400px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 5px;
+}
+main > .product form input[type="submit"] {
+	background: #4e5c70;
+	border: 0;
+	color: #FFFFFF;
+	width: 400px;
+	padding: 12px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+main > .product form input[type="submit"]:hover {
+	background: #434f61;
+}
+main > .products h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+main > .products .buttons {
+	text-align: right;
+	padding-bottom: 40px;
+}
+main > .products .buttons a {
+	display: inline-block;
+	text-decoration: none;
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: #4e5c70;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+main > .products .buttons a:hover {
+	background: #434f61;
+}
+main .cart h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+main .cart table {
+	width: 100%;
+}
+main .cart table thead td {
+	padding: 30px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+main .cart table thead td:last-child {
+	text-align: right;
+}
+main .cart table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+main .cart table tbody td:last-child {
+	text-align: right;
+}
+main .cart table .img {
+	width: 80px;
+}
+main .cart table .remove {
+	color: #777777;
+	font-size: 12px;
+	padding-top: 3px;
+}
+main .cart table .remove:hover {
+	text-decoration: underline;
+}
+main .cart table .price {
+	color: #999999;
+}
+main .cart table a {
+	text-decoration: none;
+	color: #555555;
+}
+main .cart table input[type="number"] {
+	width: 68px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 5px;
+}
+main .cart .subtotal {
+	text-align: right;
+	padding: 40px 0;
+}
+main .cart .subtotal .text {
+	padding-right: 40px;
+	font-size: 18px;
+}
+main .cart .subtotal .price {
+	font-size: 18px;
+	color: #999999;
+}
+main .cart .buttons {
+	text-align: right;
+	padding-bottom: 40px;
+}
+main .cart .buttons input[type="submit"] {
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: #4e5c70;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+main .cart .buttons input[type="submit"]:hover {
+	background: #434f61;
+}
+main .placeorder h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+main .placeorder p {
+	text-align: center;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	border-top: 1px solid #EEEEEE;
+	padding: 20px 0;
+	width: 100%;
+}
+
+
+.register{
+	width: 400px;
+	background-color: #eee7f3;
+	border-radius: 20px;
+	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+	margin: 100px auto;
+}
+
+.register h1{
+	text-align: center;
+  	color: #7748cf;
+  	font-size: 40px;
+  	padding: 20px 0 10px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+
+.register form{
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+
+.register form label {
+	display: flex;
+  	justify-content: center;
+	border-radius: 5px 0px 0px 5px;
+  	align-items: center;
+  	width: 50px;
+ 	height: 50px;
+  	background-color: #b29fc4;
+  	color: #ffffff;
+}
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {	
+	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+	border-radius: 0px 5px 5px 0px;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+
+.register form input[type="submit"] {
+	width: 150px;
+	padding: 15px;
+	margin-top: 20px;
+	background-color: #d281da;
+	border-radius: 10px;
+   	border: 0;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff;
+	transition: background-color 0.2s;
+}
+
+.register form input[type="submit"]:hover {
+	background-color: #d281da;
+  	transition: background-color 0.2s;
+}
+
+.register a {
+	color: rgb(60, 185, 243);
+	background-color: transparent;
+	text-decoration: none;
+  }
+
+.login{
+	width: 400px;
+	background-color: #eee7f3;
+	border-radius: 20px;
+	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+	margin: 100px auto;
+}
+
+.login h1{
+	text-align: center;
+  	color: #7748cf;
+  	font-size: 40px;
+  	padding: 20px 0 10px 0;
+  	border-bottom: 1px solid #b7a0d1;
+}
+
+
+.login h3{
+	color: rgb(42, 37, 53);
+	text-align: center;
+  	
+}
+
+.login form{
+	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+
+.login form label {
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+	border-radius: 5px 0px 0px 5px;
+  	width: 50px;
+ 	height: 50px;
+  	background-color: #b29fc4;
+  	color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {	
+	width: 310px;
+  	height: 50px;
+	border-radius: 0px 5px 5px 0px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 10px;
+}
+
+.login form input[type="submit"] {
+	width: 150px;
+	padding: 15px;
+	margin-top: 20px;
+	background-color: #d281da;
+	border-radius: 10px;
+    border: 0;
+	cursor: pointer;
+	font-weight: bold;
+	color: #ffffff;
+	transition: background-color 0.2s;
+}
+
+.login form input[type="submit"]:hover {
+	background-color: #d281da;
+  	transition: background-color 0.2s;
+}
+.login p {
+	color: rgb(29, 26, 37);
+	text-indent: 30px;
+}
+.login a {
+	color: rgb(60, 185, 243);
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.login-body {
+	background-image: linear-gradient(#577eff,#d281da);
+}
+
+.register-body {
+	background-image: linear-gradient(#577eff,#d281da);
+}
+
+.inputField-search {
+	width: 25%;
+	height: 50%;
+	align-self: center;
+	background-color: #c4c4c4;
+	border: 1px solid #c4c4c4;
+	border-radius: 20px;
+	padding: 3px 10px 3px 10px;
 }
