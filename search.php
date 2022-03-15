@@ -25,7 +25,7 @@ if($stmt = mysqli_prepare($link, $sql)){
 ?>
 <?=template_header('Searches')?>
 
-<div class="search result content-wrapper">
+<div class="searchresult content-wrapper">
     <h1>Result</h1>
     <p><?=$total_products?> Products</p>
     <div class="search-wrapper">

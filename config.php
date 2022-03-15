@@ -3,7 +3,7 @@
  * server with default setting (user 'root' with no password) */
     define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'root');
-    define('DB_PASSWORD', 'Melisa98');
+    define('DB_PASSWORD', '');
     define('DB_NAME', 'shoppingcart');
     
     /* Attempt to connect to MySQL database */

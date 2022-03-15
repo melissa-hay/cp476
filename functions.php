@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'Melisa98';
+    $DATABASE_PASS = '';
     $DATABASE_NAME = 'shoppingcart';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -17,9 +17,9 @@ function template_header($title) {
     $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        $loginurl = "index.php?page=login";
         $user_welcom = 'Please log in';
-        $loginWord = "Login";
+        $loginurl = "register.html?page=register";
+        $loginWord = "Login/Register";
         
     }
     else {
@@ -49,9 +49,8 @@ function template_header($title) {
                         <a href=$loginurl>$loginWord</a>
                         
                     </nav>
-                    <div class="welcome">
-                        <p> $user_welcom</p>
-                    </div>
+                    <h1 style="color: white; border: 1px solid black; justify-content: center; padding-top: 30px;">$user_welcom</h1>
+                    
                     <div class="search-container">
                         <form action="search.php", method="post">
                             <input type="text" placeholder="Search" name="search">
