@@ -644,19 +644,19 @@ main .featured {
 
 @keyframes imagesfade {
 	0% { 
-		background-image: url(/cp476/imgs/candy.jpg);
+		background-image: url(imgs/candy.jpg);
 	}
 	25% {
-		background-image: url(/cp476/imgs/gummy-bears.jpeg);
+		background-image: url(imgs/gummy-bears.jpeg);
 	}
 	50% {
-		background-image: url(/cp476/imgs/candy-corn.jpeg);
+		background-image: url(imgs/candy-corn.jpeg);
 	}
 	75% {
-		background-image: url(/cp476/imgs/candy-hearts.jpeg);
+		background-image: url(imgs/candy-hearts.jpeg);
 	}
 	100% {
-		background-image: url(/cp476/imgs/candy2.jpeg);
+		background-image: url(imgs/candy2.jpeg);
 	} 
 }
 
@@ -665,7 +665,6 @@ main .featured h2 {
 	margin: 0;
 	width: 1050px;
 	font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
-	font-size: 68px;
 	color: #FFFFFF;
 	padding-bottom: 10px;
 }
@@ -1060,12 +1059,27 @@ footer {
 	background-image: linear-gradient(#577eff,#d281da);
 }
 
-.inputField-search {
+.content-wrapper.search-container {  /*PLZ FIX HERE AND DOWN. THXX - melisa */
 	width: 25%;
 	height: 50%;
 	align-self: center;
+	margin-top: 10px;
 	background-color: #c4c4c4;
 	border: 1px solid #c4c4c4;
 	border-radius: 20px;
-	padding: 3px 10px 3px 10px;
+	/* padding: 3px 10px 3px 10px; */
 }
+
+.search-container button {
+	width: 25%;
+	height: 50%;
+	float: right;
+	padding: 6px 10px;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .search-container button:hover {
+	background: #ccc;
+  }

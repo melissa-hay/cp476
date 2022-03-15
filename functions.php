@@ -52,7 +52,12 @@ function template_header($title) {
                     <div class="welcome">
                         <p> $user_welcom</p>
                     </div>
-                    <input type="text" class="inputField-search" placeholder="Search">
+                    <div class="search-container">
+                        <form action="search.php", method="post">
+                            <input type="text" placeholder="Search" name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
                     <div class="link-icons">
                         <a href="index.php?page=cart">
                             <i class="fas fa-shopping-cart"></i>
