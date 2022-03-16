@@ -141,7 +141,7 @@ main .featured p {
 	font-size: 24px;
 	color: #FFFFFF;
 }
-main .recentlyadded h2 {
+main .selectedproducts h2 {
 	display: block;
 	font-weight: bold;
 	margin: 0;
@@ -151,7 +151,7 @@ main .recentlyadded h2 {
 	width: 100%;
 	color: #000747;
 }
-main .recentlyadded .products, main .products .products-wrapper {
+main .selectedproducts .products, main .products .products-wrapper {
 	height: fit-content;
 	display: flex;
 	flex-wrap: wrap;
@@ -161,35 +161,35 @@ main .recentlyadded .products, main .products .products-wrapper {
 	border: 1px solid #000747;
 	border-radius: 5px;
 }
-main .recentlyadded .products .product, main .products .products-wrapper .product {
+main .selectedproducts .products .product, main .products .products-wrapper .product {
 	display: block;
 	overflow: hidden;
 	text-decoration: none;
 	width: 25%;
 	padding-bottom: 60px;
 }
-main .recentlyadded .products .product img, main .products .products-wrapper .product img {
+main .selectedproducts .products .product img, main .products .products-wrapper .product img {
 	transform: scale(1);
 	transition: transform 1s;
 }
-main .recentlyadded .products .product .name, main .products .products-wrapper .product .name {
+main .selectedproducts .products .product .name, main .products .products-wrapper .product .name {
 	display: block;
 	color: #555555;
 	padding: 20px 0 2px 0;
 }
-main .recentlyadded .products .product .price, main .products .products-wrapper .product .price {
+main .selectedproducts .products .product .price, main .products .products-wrapper .product .price {
 	display: block;
 	color: #999999;
 }
-main .recentlyadded .products .product .rrp, main .products .products-wrapper .product .rrp {
+main .selectedproducts .products .product .rrp, main .products .products-wrapper .product .rrp {
 	color: #BBBBBB;
 	text-decoration: line-through;
 }
-main .recentlyadded .products .product:hover img, main .products .products-wrapper .product:hover img {
+main .selectedproducts .products .product:hover img, main .products .products-wrapper .product:hover img {
 	transform: scale(1.05);
 	transition: transform 1s;
 }
-main .recentlyadded .products .product:hover .name, main .products .products-wrapper .product:hover .name {
+main .selectedproducts .products .product:hover .name, main .products .products-wrapper .product:hover .name {
 	text-decoration: underline;
 }
 main > .product {
@@ -675,7 +675,7 @@ main .featured p {
 	font-size: 24px;
 	color: #FFFFFF;
 }
-main .recentlyadded h2 {
+main .selectedproducts h2, main .products h2 {
 	display: block;
 	font-weight: bold;
 	margin: 0;
@@ -685,45 +685,45 @@ main .recentlyadded h2 {
 	width: 100%;
 	color: #000747;
 }
-main .recentlyadded .products, main .products .products-wrapper {
+main .selectedproducts .products, main .products .products-wrapper {
 	height: fit-content;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 20px 50px 0 50px;
 	border: 1px solid #000747;
 	border-radius: 5px;
 }
-main .recentlyadded .products .product, main .products .products-wrapper .product {
+main .selectedproducts .products .product, main .products .products-wrapper .product {
 	display: block;
 	overflow: hidden;
 	text-decoration: none;
 	width: 25%;
 	padding-bottom: 60px;
 }
-main .recentlyadded .products .product img, main .products .products-wrapper .product img {
+main .selectedproducts .products .product img, main .products .products-wrapper .product img {
 	transform: scale(1);
 	transition: transform 1s;
 }
-main .recentlyadded .products .product .name, main .products .products-wrapper .product .name {
+main .selectedproducts .products .product .name, main .products .products-wrapper .product .name {
 	display: block;
 	color: #555555;
 	padding: 20px 0 2px 0;
 }
-main .recentlyadded .products .product .price, main .products .products-wrapper .product .price {
+main .selectedproducts .products .product .price, main .products .products-wrapper .product .price {
 	display: block;
 	color: #999999;
 }
-main .recentlyadded .products .product .rrp, main .products .products-wrapper .product .rrp {
+main .selectedproducts .products .product .rrp, main .products .products-wrapper .product .rrp {
 	color: #BBBBBB;
 	text-decoration: line-through;
 }
-main .recentlyadded .products .product:hover img, main .products .products-wrapper .product:hover img {
+main .selectedproducts .products .product:hover img, main .products .products-wrapper .product:hover img {
 	transform: scale(1.05);
 	transition: transform 1s;
 }
-main .recentlyadded .products .product:hover .name, main .products .products-wrapper .product:hover .name {
+main .selectedproducts .products .product:hover .name, main .products .products-wrapper .product:hover .name {
 	text-decoration: underline;
 }
 main > .product {
@@ -1063,8 +1063,7 @@ div .search-container {  /*PLZ FIX HERE AND DOWN. THXX - melisa */
 	width: 25%;
 	height: 50%;
 	align-self: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px 5% 10px 8%;
 
 	background-color: #d3b9db;
 	border: 1px solid #d3b9db;
@@ -1125,7 +1124,7 @@ div .search-container input[type=text] {
 	display: block;
 	color: #999999;
 }
-main .recentlyadded .products .product .rrp, main .products .products-wrapper .product .rrp {
+main .selectedproducts .products .product .rrp, main .products .products-wrapper .product .rrp {
 	color: #BBBBBB;
 	text-decoration: line-through;
 }

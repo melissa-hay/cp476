@@ -11,7 +11,7 @@ unset($_SESSION['loggedin']);
 session_destroy();
 
 // Redirect to home page
-header("Location: http://localhost:8080/ShoppingCartcopy/index.php");
+header("Location: index.php?page=home");
 
 exit;
 ?>

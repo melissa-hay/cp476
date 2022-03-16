@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
+    $DATABASE_PASS = 'Melisa98';
     $DATABASE_NAME = 'shoppingcart';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -23,7 +23,7 @@ function template_header($title) {
         
     }
     else {
-        $user_welcom = "Welcome " . htmlspecialchars($_SESSION["username"]); 
+        $user_welcom = "Welcome @" . htmlspecialchars($_SESSION["username"]); 
         $loginurl = "logout.php";
         $loginWord = "Logout";
     }
@@ -42,21 +42,19 @@ function template_header($title) {
             <header>
                 <div class="content-wrapper">
                     <img style="width: 8%;height: 8%" src="imgs/logo.png">
-                    <nav>
-                        <a href="index.php">Home</a>
-                        <a href="index.php?page=products">Favourites</a>
-                        <a href="">SALES</a>
-                        <a href=$loginurl>$loginWord</a>
-                        
-                    </nav>
-                    <h1 style="color: white; border: 1px solid black; justify-content: center; padding-top: 30px;">$user_welcom</h1>
-                    
                     <div class="search-container">
                         <form action="search.php", method="post">
                             <input type="text" placeholder="Search" name="search">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
+                    <h1 style="color: white; justify-content: center; margin-right: 3%;">$user_welcom</h1>
+                    <nav>
+                        <a href="index.php">Home</a>
+                        <a href="index.php?page=products">Products</a>
+                        <a href=$loginurl>$loginWord</a>
+                        
+                    </nav>
                     <div class="link-icons">
                         <a href="index.php?page=cart">
                             <i class="fas fa-shopping-cart"></i>

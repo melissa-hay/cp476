@@ -35,7 +35,7 @@ if (isset($_GET['id'])) {
             <input type="submit" value="Add To Cart">
         </form>
         <div class="description">
-            <?=$product['desc']?>
+            <?=$product['descr']?>
         </div>
     </div>
 </div>

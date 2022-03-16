@@ -5,7 +5,7 @@ include './functions.php';
 $result = trim($_POST["search"]);
 
 
-$sql = "SELECT * FROM products WHERE CONCAT(`desc`, `name`) LIKE ?"; #select any column that matches user query
+$sql = "SELECT * FROM products WHERE CONCAT(`descr`, `name`) LIKE ?"; #select any column that matches user query
 
 $search = "%" . $result ."%";
 
@@ -25,14 +25,14 @@ if($stmt = mysqli_prepare($link, $sql)){
 ?>
 <?=template_header('Searches')?>
 
-<div class="searchresult content-wrapper">
-    <h1>Result</h1>
+<div class="selectedproducts content-wrapper">
+    <h2>Result</h2>
     <p><?=$total_products?> Products</p>
-    <div class="search-wrapper">
+    <div class="products">
         <?php foreach ($products as $product): ?>
         <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
             <img src="imgs/<?=$product['img']?>" width="200" height="200" alt="<?=$product['name']?>">
-            <span class="name"><?=$product['name']?></span>
+            <span style="padding-right:100px" class="name"><?=$product['name']?></span>
             <span class="price">
                 &dollar;<?=$product['price']?>
                 <?php if ($product['rrp'] > 0): ?>
@@ -42,7 +42,6 @@ if($stmt = mysqli_prepare($link, $sql)){
         </a>
         <?php endforeach; ?>
     </div>
-    
 </div>
 
 <?=template_footer()?>
