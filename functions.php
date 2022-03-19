@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'Melisa98';
+    $DATABASE_PASS = '';
     $DATABASE_NAME = 'shoppingcart';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -16,18 +16,22 @@ function pdo_connect_mysql() {
 function template_header($title) {
     $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
+    //if user isn't signed in, display login/register message 
+    //and link to register / login
     if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         $user_welcom = 'Please log in';
         $loginurl = "register.html?page=register";
         $loginWord = "Login/Register";
         
     }
+    //if user is logged in, display 'welcome <username>' message 
+    //and link to logout
     else {
-        $user_welcom = "Welcome @" . htmlspecialchars($_SESSION["username"]); 
+        $user_welcom = "Welcome " . htmlspecialchars($_SESSION["username"]); 
         $loginurl = "logout.php";
         $loginWord = "Logout";
     }
-    // $user_welcom = isset($_SESSION['username']) ? 'welcome '. $_SESSION['username'] : 'Please sign in';
+
     echo <<<EOT
     <!DOCTYPE html>
     <html>

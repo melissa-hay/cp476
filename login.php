@@ -16,6 +16,7 @@ $username_err = $password_err = $login_err = "";
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
+    //get username and password from user input
     $username = trim($_POST["username"]);
     $password = trim($_POST["password"]);
 
@@ -45,8 +46,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Password is correct, so start a new session
                             session_start();
                             
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
+                            // Store data in session variables to access later
+                            $_SESSION["loggedin"] = true; 
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             

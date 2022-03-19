@@ -2,17 +2,17 @@
 require_once "config.php";
 include './functions.php';
 
-$result = trim($_POST["search"]);
+$result = trim($_POST["search"]); #grab user's query
 
+#select any column that matches user query
+$sql = "SELECT * FROM products WHERE CONCAT(`descr`, `name`) LIKE ?"; 
 
-$sql = "SELECT * FROM products WHERE CONCAT(`descr`, `name`) LIKE ?"; #select any column that matches user query
+#use % wildcard to match any number of characters 
+$search = "%" . $result ."%"; 
 
-$search = "%" . $result ."%";
-
-// $stmt = $link->prepare('SELECT id, password FROM accounts WHERE username = ?')
 if($stmt = mysqli_prepare($link, $sql)){
-  // Bind variables to the prepared statement as parameters
 
+  // Bind variables to the prepared statement as parameters
   mysqli_stmt_bind_param($stmt, "s", $search);
   if(mysqli_stmt_execute($stmt)) {
     $products = $stmt->get_result();
@@ -21,7 +21,7 @@ if($stmt = mysqli_prepare($link, $sql)){
   }
 }
 
-
+//HTML to display all matching products to user's search query
 ?>
 <?=template_header('Searches')?>
 
