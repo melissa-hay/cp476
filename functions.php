@@ -12,7 +12,7 @@ function pdo_connect_mysql() {
     	exit('Failed to connect to database!');
     }
 }
-// Template header, feel free to customize this
+
 function template_header($title) {
     $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
 
